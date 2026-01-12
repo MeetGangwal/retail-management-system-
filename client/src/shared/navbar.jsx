@@ -1,12 +1,19 @@
 // src/shared/navbar.jsx
 import React, { useState } from "react";
 import "./navbar.css";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import ConfirmDialog from "../components/ConfirmDialog";
 
-export default function Navbar({ user, navigate }) {
+export default function Navbar({ user }) {
   const { logout } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [showLogoutConfirm, setShowLogoutConfirm] = useState(false);
+
+  const path = location.pathname;
+  const isActive = (target) =>
+    path === target || (target === "/dashboard" && path === "/");
 
   const handleLogoutConfirm = () => {
     logout();
@@ -26,25 +33,37 @@ export default function Navbar({ user, navigate }) {
 
         <nav className="dashboard-nav">
           <button
-            className="dashboard-tab dashboard-tab-active"
+            className={
+              "dashboard-tab " +
+              (isActive("/dashboard") ? "dashboard-tab-active" : "")
+            }
             onClick={() => navigate("/dashboard")}
           >
             Dashboard
           </button>
           <button
-            className="dashboard-tab"
+            className={
+              "dashboard-tab " +
+              (isActive("/products") ? "dashboard-tab-active" : "")
+            }
             onClick={() => navigate("/products")}
           >
             Products
           </button>
           <button
-            className="dashboard-tab"
+            className={
+              "dashboard-tab " +
+              (isActive("/cart") ? "dashboard-tab-active" : "")
+            }
             onClick={() => navigate("/cart")}
           >
             Cart
           </button>
           <button
-            className="dashboard-tab"
+            className={
+              "dashboard-tab " +
+              (isActive("/sales-report") ? "dashboard-tab-active" : "")
+            }
             onClick={() => navigate("/sales-report")}
           >
             Sales Report
