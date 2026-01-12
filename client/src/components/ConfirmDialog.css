@@ -1,0 +1,60 @@
+/* src/components/ConfirmDialog.css */
+.confirm-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.confirm-dialog {
+  background: radial-gradient(circle at top, #0b1120 0, #020617 70%);
+  border-radius: 16px;
+  padding: 20px 22px 18px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.9);
+  max-width: 340px;
+  width: 100%;
+  color: #e5e7eb;
+}
+
+.confirm-title {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.confirm-message {
+  margin: 0 0 16px;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn-secondary {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(55, 65, 81, 0.9);
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #00c4ff;
+  color: #020617;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(248, 148, 58, 0.4);
+}

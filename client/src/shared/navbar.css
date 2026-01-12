@@ -1,0 +1,51 @@
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px;
+  background: rgba(9, 13, 30, 0.92);
+  border-bottom: 1px solid rgba(31, 41, 55, 0.9);
+  backdrop-filter: blur(18px);
+}
+
+.dashboard-title {
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+.dashboard-store {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* Nav tabs */
+.dashboard-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-tab {
+  border: none;
+  background: transparent;
+  padding: 6px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #9ca3af;
+  transition: all 0.15s ease-out;
+}
+
+.dashboard-tab:hover {
+  background: rgba(31, 41, 55, 0.8);
+  color: #e5e7eb;
+}
+
+.dashboard-tab-active {
+  background: #00c4ff;
+  color: #020617;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+}

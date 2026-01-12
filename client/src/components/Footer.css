@@ -1,0 +1,30 @@
+/* src/components/Footer.css */
+.app-footer {
+  margin-top: 40px;
+  padding: 16px 32px;
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #9ca3af;
+  background: radial-gradient(circle at top, #020617 0, #02040c 60%, #000 100%);
+}
+
+.app-footer-left {
+  opacity: 0.9;
+}
+
+.app-footer-right span {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .app-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
